@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>れおん｜業務システム開発ポートフォリオ</title>
+  <meta name="description" content="CSV の自動処理・在庫管理・顧客管理など、業務を楽にするシステムを要件定義からテスト・資料まで一貫して作ります。れおんのポートフォリオです。">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="れおん｜業務システム開発ポートフォリオ">
+  <meta property="og:description" content="業務データ処理・在庫管理・顧客／案件管理の 3 作品。設計書・自動テスト・セキュリティチェックまで公開しています。">
+  <meta property="og:image" content="images/p03-dashboard-light.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+</head>
+<body>
+  <a class="skip" href="#works">作品へ移動</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="ページの先頭へ">
+        <span class="brand-mark" aria-hidden="true">れ</span>
+        <span>れおん<small>Portfolio</small></span>
+      </a>
+      <nav class="nav" aria-label="ページ内">
+        <a href="#works">作品</a>
+        <a href="#skills">できること</a>
+        <a href="#process">進め方</a>
+        <a href="#contact">ご相談</a>
+      </nav>
+      <button class="theme-toggle" type="button" id="themeToggle" aria-label="ライトモード・ダークモードを切り替える">
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ===== はじめに ===== -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">業務システム開発</p>
+          <h1><span class="nb">「手作業で</span><span class="nb">毎日やっている」を、</span><br><span class="nb"><span class="hl">ボタンひとつ</span>に。</span></h1>
+          <p class="lead">
+            CSV の整形・照合、在庫の管理、顧客や案件の管理など、毎日の業務を楽にするシステムを作ります。
+            要件定義・設計から、自動テスト・操作マニュアル・セキュリティチェックまで、
+            <strong>納品したあとも安心して使える形</strong>でお渡しします。
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#works">作品を見る</a>
+            <a class="btn btn-ghost" href="#contact">ご相談はこちら</a>
+          </div>
+          <ul class="stats" aria-label="3 作品の数字">
+            <li><b>3</b><span>作品</span></li>
+            <li><b>261</b><span>自動テスト</span></li>
+            <li><b>20</b><span>のセキュリティ<br>チェック項目</span></li>
+          </ul>
+        </div>
+        <figure class="hero-shot">
+          <img src="images/p03-dashboard-light.webp" width="1360" height="860" alt="顧客・案件管理システムのダッシュボード。顧客数・進行中の案件・見込み金額・期限切れのタスクのカードと、自分のタスク・締める予定の案件の一覧">
+          <img class="hero-shot-sub" src="images/p01-dashboard-dark.webp" width="1320" height="820" alt="業務データ処理ツールのダッシュボード（ダークモード）" loading="lazy">
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== 作品 ===== -->
+    <section id="works" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Works</p>
+          <h2>作品</h2>
+          <p>3 つとも、業務の流れを想定した架空のシナリオで、実際に動くところまで作っています（データはすべて架空です）。</p>
+        </header>
+
+        <!-- 01 -->
+        <article class="work" id="work-01">
+          <div class="work-media">
+            <div class="gallery" data-gallery>
+              <button type="button" class="shot main" data-full="images/p01-dashboard-dark.webp" data-caption="ダッシュボード：処理結果の件数と、いちばん多い・少ない商品、グラフ">
+                <img src="images/p01-dashboard-dark.webp" width="1320" height="820" alt="業務データ処理ツールのダッシュボード" loading="lazy">
+              </button>
+              <button type="button" class="shot" data-full="images/p01-reconcile-dark.webp" data-caption="照合：受注 CSV と入金 CSV を注文番号で突き合わせ、不一致・片方だけを色分け">
+                <img src="images/p01-reconcile-dark.webp" width="1320" height="820" alt="照合結果の一覧" loading="lazy">
+              </button>
+              <button type="button" class="shot" data-full="images/p01-issues-dark.webp" data-caption="エラー一覧：元の CSV の行番号つきで、どこを直せばよいかが分かる">
+                <img src="images/p01-issues-dark.webp" width="1320" height="820" alt="エラー一覧" loading="lazy">
+              </button>
+              <button type="button" class="shot" data-full="images/p01-dashboard-light.webp" data-caption="ライトモード：左下のボタンで切り替え、次に開いたときも残る">
+                <img src="images/p01-dashboard-light.webp" width="1320" height="820" alt="ライトモードのダッシュボード" loading="lazy">
+              </button>
+            </div>
+          </div>
+          <div class="work-body">
+            <p class="work-no">Portfolio 01 ・ デスクトップアプリ</p>
+            <h3>業務データ処理ツール</h3>
+            <p class="work-catch">CSV の整形・検証・照合・集計を自動化</p>
+            <p>
+              ネットショップの受注 CSV と決済サービスの入金 CSV を例に、表記ゆれを直し、誤りや重複を行番号つきで一覧にし、
+              2 つの CSV を突き合わせて「未入金」「金額違い」「注文のない入金」を見つけ、月別・商品別に集計します。
+            </p>
+            <dl class="solve">
+              <dt>こんなお困りごとに</dt>
+              <dd>毎月の CSV を Excel で手作業で直している／入金の消し込みに時間がかかる／データの間違いに後から気づく</dd>
+            </dl>
+            <h4>工夫した点</h4>
+            <ul class="points">
+              <li><b>設定ファイルで業務を切り替え</b>：列やチェックの決まりを JSON に書くので、ほかの CSV にもそのまま使えます</li>
+              <li><b>元の CSV の行番号で報告</b>：空行や改行が入っていても、元のファイルで探せる番号を出します</li>
+              <li><b>勝手に消さない</b>：直せない値は残してエラーにし、直した内容は記録に残します</li>
+              <li><b>Excel で開いても安全</b>：文字化けしない形式で出力し、数式が勝手に動かない対策も入れました</li>
+            </ul>
+            <ul class="tags" aria-label="使った技術">
+              <li>Python</li><li>Tkinter</li><li>pandas</li><li>JSON</li><li>pytest</li>
+            </ul>
+            <ul class="facts">
+              <li><span>自動テスト</span>111 件</li>
+              <li><span>資料</span>要件定義書・基本設計書・詳細設計書・テスト仕様書・操作マニュアル</li>
+            </ul>
+            <p class="code-link" data-repo=""></p>
+          </div>
+        </article>
+
+        <!-- 02 -->
+        <article class="work reverse" id="work-02">
+          <div class="work-media">
+            <div class="gallery" data-gallery>
+              <button type="button" class="shot main" data-full="images/p02-dashboard.webp" data-caption="ダッシュボード：在庫金額・在庫切れ・要発注と、対応が必要な商品の一覧">
+                <img src="images/p02-dashboard.webp" width="1360" height="860" alt="在庫管理システムのダッシュボード" loading="lazy">
+              </button>
+              <button type="button" class="shot" data-full="images/p02-stock.webp" data-caption="在庫一覧：在庫数は取引の記録から自動で計算">
+                <img src="images/p02-stock.webp" width="1360" height="860" alt="在庫一覧" loading="lazy">
+              </button>
+              <button type="button" class="shot" data-full="images/p02-monthly.webp" data-caption="月別集計：入庫・出庫の数と金額をグラフと表で">
+                <img src="images/p02-monthly.webp" width="1360" height="860" alt="月別集計" loading="lazy">
+              </button>
+              <button type="button" class="shot" data-full="images/p02-integrity.webp" data-caption="整合性チェック：記録におかしなところがないかを 8 つの観点で確認">
+                <img src="images/p02-integrity.webp" width="1360" height="860" alt="整合性チェックの結果" loading="lazy">
+              </button>
+            </div>
+          </div>
+          <div class="work-body">
+            <p class="work-no">Portfolio 02 ・ Web アプリ</p>
+            <h3>在庫管理システム</h3>
+            <p class="work-catch">入出庫を記録するだけで、在庫が自動でそろう</p>
+            <p>
+              小さなお店や社内の備品管理を想定した在庫管理です。入庫・出庫を記録すると在庫数と在庫金額が自動で計算され、
+              在庫切れや発注が必要な商品をダッシュボードでお知らせします。
+            </p>
+            <dl class="solve">
+              <dt>こんなお困りごとに</dt>
+              <dd>Excel の在庫数がいつの間にかずれる／間違えて直したら履歴が分からなくなった／発注のタイミングを逃す</dd>
+            </dl>
+            <h4>工夫した点</h4>
+            <ul class="points">
+              <li><b>在庫数は保存せず、記録から計算</b>：数字を二重に持たないので、ずれが起きません</li>
+              <li><b>在庫がマイナスにならない</b>：過去の日付で出庫しても、その後のどの日も足りるかを確かめます</li>
+              <li><b>取消は「逆向きの記録」を足す</b>：確定した記録は消さず、同じ取引は 1 回しか取り消せません</li>
+              <li><b>データベースでも守る</b>：制約と書き込みの順番待ちで、同時に操作しても数字が崩れません</li>
+            </ul>
+            <ul class="tags" aria-label="使った技術">
+              <li>Python</li><li>Streamlit</li><li>SQLite</li><li>SQLAlchemy</li><li>pandas</li><li>pytest</li>
+            </ul>
+            <ul class="facts">
+              <li><span>自動テスト</span>83 件（画面の結合テストを含む）</li>
+              <li><span>資料</span>要件定義書・基本設計書・DB 設計書（ER 図）・詳細設計書・テスト仕様書</li>
+            </ul>
+            <p class="code-link" data-repo=""></p>
+          </div>
+        </article>
+
+        <!-- 03 -->
+        <article class="work" id="work-03">
+          <div class="work-media">
+            <div class="gallery" data-gallery>
+              <button type="button" class="shot main" data-full="images/p03-board-dark.webp" data-caption="案件のボード表示（ダークモード）：見込み → 提案中 → 交渉中 → 受注／失注">
+                <img src="images/p03-board-dark.webp" width="1360" height="860" alt="顧客・案件管理システムの案件ボード" loading="lazy">
+              </button>
+              <button type="button" class="shot" data-full="images/p03-schedule-light.webp" data-caption="予定表：案件とタスクを開始日から期限までの帯で表示（ガントチャート）">
+                <img src="images/p03-schedule-light.webp" width="1360" height="860" alt="予定表（ガントチャート）" loading="lazy">
+              </button>
+              <button type="button" class="shot" data-full="images/p03-notice.webp" data-caption="期限のお知らせ：ログインしたときに、期限切れ・期限が近いタスクを知らせる">
+                <img src="images/p03-notice.webp" width="1360" height="860" alt="期限のお知らせのダイアログ" loading="lazy">
+              </button>
+              <button type="button" class="shot" data-full="images/p03-team-light.webp" data-caption="チームの状況（マネージャー向け）：メンバーごとの期限切れ・遅れそうなタスク">
+                <img src="images/p03-team-light.webp" width="1360" height="860" alt="チームの状況" loading="lazy">
+              </button>
+            </div>
+          </div>
+          <div class="work-body">
+            <p class="work-no">Portfolio 03 ・ Web システム</p>
+            <h3>顧客・案件管理システム（CRM）</h3>
+            <p class="work-catch">権限つきで、チームの商談とタスクを一元管理</p>
+            <p>
+              小さな営業チームを想定した顧客管理です。顧客・案件・タスクを一か所で管理し、ダッシュボードで
+              「期限切れのタスク」「今月締める案件」がひと目で分かります。3 段階の権限と操作履歴つきです。
+            </p>
+            <dl class="solve">
+              <dt>こんなお困りごとに</dt>
+              <dd>顧客情報が人ごとの Excel に散らばっている／だれが何を進めているか見えない／期限の抜けが起きる</dd>
+            </dl>
+            <h4>工夫した点</h4>
+            <ul class="points">
+              <li><b>権限の決まりを 1 か所に集約</b>：URL の番号を書き換えても、他人のデータは変更できません（テストで確認）</li>
+              <li><b>同時に編集しても上書きしない</b>：先に保存された内容を消さない仕組み（楽観的ロック）</li>
+              <li><b>だれが・いつ・何を変えたか</b>：操作履歴に変更の前後を残します</li>
+              <li><b>安全なログイン</b>：パスワードは復元できない形で保存し、続けて失敗するとロックします</li>
+            </ul>
+            <ul class="tags" aria-label="使った技術">
+              <li>React</li><li>TypeScript</li><li>FastAPI</li><li>PostgreSQL</li><li>REST API</li><li>Docker</li><li>pytest</li><li>Vitest</li>
+            </ul>
+            <ul class="facts">
+              <li><span>自動テスト</span>67 件（API・権限・DB 制約・画面）</li>
+              <li><span>資料</span>要件定義書・基本設計書・DB 設計書・API 設計書（OpenAPI）・詳細設計書・テスト仕様書</li>
+            </ul>
+            <p class="code-link" data-repo=""></p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== できること ===== -->
+    <section id="skills" class="section alt">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Skills</p>
+          <h2>できること</h2>
+        </header>
+        <div class="cards">
+          <div class="card">
+            <h3><span class="ico" aria-hidden="true">⇄</span>データ処理・自動化</h3>
+            <p>CSV・Excel 向けデータの整形、検証、照合、集計、レポート作成。毎月の手作業をボタンひとつに。</p>
+            <p class="card-tech">Python / pandas</p>
+          </div>
+          <div class="card">
+            <h3><span class="ico" aria-hidden="true">▦</span>業務アプリ・データベース</h3>
+            <p>在庫・備品・受発注などの管理ツール。データがずれない・消えないデータベース設計。</p>
+            <p class="card-tech">SQLite / PostgreSQL / SQLAlchemy / Streamlit</p>
+          </div>
+          <div class="card">
+            <h3><span class="ico" aria-hidden="true">◎</span>Web システム・API</h3>
+            <p>ログイン・権限つきの業務 Web システム、REST API の設計と開発。スマホ表示やダークモードにも対応。</p>
+            <p class="card-tech">React / TypeScript / FastAPI</p>
+          </div>
+          <div class="card">
+            <h3><span class="ico" aria-hidden="true">✓</span>品質・ドキュメント</h3>
+            <p>自動テスト、設計書・操作マニュアル、20 項目のセキュリティチェック。引き継ぎしやすい形で納品します。</p>
+            <p class="card-tech">pytest / Vitest / pip-audit / npm audit</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 進め方 ===== -->
+    <section id="process" class="section">
+      <div class="wrap">
+        <header class="section-head">
+          <p class="eyebrow">Process</p>
+          <h2>進め方</h2>
+          <p>3 つの作品も、すべてこの流れで作りました。</p>
+        </header>
+        <ol class="steps">
+          <li><b>ヒアリング</b><span>今の業務の流れと、困っていることをうかがいます</span></li>
+          <li><b>要件定義・設計</b><span>作るものと画面・データの形を資料にして、確認していただきます</span></li>
+          <li><b>開発・自動テスト</b><span>決まりごとはテストで確かめながら作ります</span></li>
+          <li><b>セキュリティチェック</b><span>20 項目を確認し、結果を表でお渡しします</span></li>
+          <li><b>納品・使い方の説明</b><span>操作マニュアルつきでお渡しし、使い始めまでお手伝いします</span></li>
+        </ol>
+        <p class="note">開発には AI（Claude Code）も活用し、設計・テスト・資料づくりを早く・丁寧に進めています。</p>
+      </div>
+    </section>
+
+    <!-- ===== ご相談 ===== -->
+    <section id="contact" class="section contact">
+      <div class="wrap contact-inner">
+        <h2>ご相談はクラウドワークスから</h2>
+        <p>「こんなことはできる？」という段階でもお気軽にどうぞ。<br>ご連絡はクラウドワークスのメッセージでお受けしています。</p>
+        <a class="btn btn-primary btn-lg" href="https://crowdworks.jp/public/employees/4675967" target="_blank" rel="noopener noreferrer">
+          クラウドワークスのプロフィールを見る
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>© 2026 れおん　／　掲載している画面のデータはすべて架空のものです。</p>
+    </div>
+  </footer>
+
+  <dialog id="viewer" class="viewer" aria-label="画面写真の拡大">
+    <button type="button" class="viewer-close" aria-label="閉じる">×</button>
+    <button type="button" class="viewer-nav prev" aria-label="前の写真">‹</button>
+    <figure>
+      <img id="viewerImg" alt="">
+      <figcaption id="viewerCap"></figcaption>
+    </figure>
+    <button type="button" class="viewer-nav next" aria-label="次の写真">›</button>
+  </dialog>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
