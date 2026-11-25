@@ -178,8 +178,63 @@ body { word-break: auto-phrase; }
 /* ---------- ご相談 ---------- */
 .contact { background: linear-gradient(135deg, #1c3fa8, #2f6bff 55%, #5b8cff); color: #fff; text-align: center; }
 .contact h2 { font-size: clamp(24px, 3vw, 32px); }
-.contact p { margin: 14px 0 30px; opacity: .92; }
+.contact-inner > p { margin: 14px 0 30px; opacity: .92; }
 .contact .btn-primary { background: #fff; color: #1c3fa8; box-shadow: 0 10px 24px rgb(0 0 0 / .2); }
+.cw-note { margin: 0 auto 40px; }
+.cw-note p { margin: 0 0 16px; }
+
+/* 問い合わせフォーム（青い背景の上の白いカード） */
+.inquiry {
+  max-width: 720px; margin: 0 auto; padding: 32px; text-align: left;
+  background: var(--surface); color: var(--text); border-radius: 20px; box-shadow: 0 20px 50px rgb(0 0 0 / .22);
+}
+.inquiry h3 { font-size: 22px; }
+.inquiry .inquiry-lead { margin: 8px 0 24px; color: var(--muted); opacity: 1; }
+.inquiry p { opacity: 1; }
+.iq-off { margin: 0 0 20px; padding: 12px 14px; border-radius: 10px; background: var(--accent-soft); font-weight: 700; }
+.iq-field { margin-bottom: 18px; }
+.iq-field > label { display: block; font-weight: 700; font-size: 14.5px; margin-bottom: 6px; }
+.req { display: inline-block; margin-left: 8px; padding: 0 7px; border-radius: 6px; font-size: 11.5px; font-weight: 700; color: #fff; background: #d6455d; vertical-align: 1px; }
+.iq-form input[type=text], .iq-form input[type=email], .iq-form select, .iq-form textarea {
+  width: 100%; font: inherit; font-size: 16px; color: var(--text); background: var(--bg);
+  border: 1px solid var(--line); border-radius: 10px; padding: 11px 13px;
+}
+.iq-form textarea { resize: vertical; line-height: 1.7; min-height: 190px; }
+.iq-form textarea::placeholder, .iq-form input::placeholder { color: var(--muted); opacity: .8; }
+.iq-form :is(input, select, textarea):focus-visible { outline: 3px solid color-mix(in srgb, var(--accent) 45%, transparent); outline-offset: 1px; border-color: var(--accent); }
+.iq-form [aria-invalid="true"] { border-color: #d6455d; }
+.iq-form :disabled { opacity: .55; cursor: not-allowed; }
+.iq-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 0 16px; }
+.iq-hint { margin: 6px 0 0; font-size: 12.5px; color: var(--muted); text-align: right; }
+.iq-err { margin: 6px 0 0; font-size: 13px; font-weight: 700; color: #d6455d; }
+.iq-err:empty { display: none; }
+.iq-trap { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.check { display: flex; gap: 10px; align-items: flex-start; font-size: 14.5px; cursor: pointer; }
+.check input { width: 20px; height: 20px; margin: 3px 0 0; accent-color: var(--accent); flex: none; }
+.check a { color: var(--accent); font-weight: 700; }
+.iq-main { width: 100%; margin-top: 6px; }
+.inquiry .btn-primary { background: var(--accent); color: var(--accent-ink); box-shadow: 0 6px 16px color-mix(in srgb, var(--accent) 30%, transparent); }
+.inquiry h4 { font-size: 18px; margin: 0; }
+.inquiry h4:focus { outline: none; }
+.iq-step[data-step="confirm"] .iq-hint { text-align: left; margin-bottom: 14px; }
+.iq-review { margin: 0; border-top: 1px solid var(--line); }
+.iq-review dt { font-size: 13px; font-weight: 700; color: var(--muted); padding-top: 12px; }
+.iq-review dd { margin: 2px 0 0; padding-bottom: 12px; border-bottom: 1px solid var(--line); overflow-wrap: anywhere; }
+.iq-review dd.multi { white-space: pre-wrap; }
+.iq-send-err { margin-top: 14px; }
+.iq-actions { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 12px; margin-top: 20px; }
+.iq-step[data-step="done"] p { margin: 10px 0 0; }
+.site-footer a { color: inherit; }
+
+/* 個人情報の取り扱いなど、文章だけのページ */
+.doc { max-width: 760px; }
+.doc h1 { font-size: clamp(26px, 3.4vw, 34px); margin-bottom: 18px; }
+.doc h2 { font-size: 19px; margin: 36px 0 10px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+.doc p, .doc li { font-size: 15.5px; }
+.doc ul { padding-left: 1.3em; }
+.doc li { margin-bottom: 6px; }
+.doc li::marker { color: var(--accent); }
+.doc-date { margin-top: 40px; color: var(--muted); font-size: 14px; }
 
 .site-footer { padding: 28px 0; font-size: 13px; color: var(--muted); text-align: center; }
 .site-footer p { margin: 0; }
@@ -216,6 +271,10 @@ body { word-break: auto-phrase; }
 
 /* ---------- スマホ ---------- */
 @media (max-width: 760px) {
+  .inquiry { padding: 22px 18px; border-radius: 16px; }
+  .iq-row { grid-template-columns: minmax(0, 1fr); }
+  .iq-actions { grid-template-columns: minmax(0, 1fr); }
+  .iq-actions #iqSend { order: -1; }
   .wrap { width: min(1120px, 100% - 32px); }
   .nav { display: none; }
   .header-inner { justify-content: space-between; }

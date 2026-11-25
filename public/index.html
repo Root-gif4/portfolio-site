@@ -429,19 +429,108 @@
     <!-- ===== ご相談 ===== -->
     <section id="contact" class="section contact">
       <div class="wrap contact-inner">
-        <h2>ご相談はクラウドワークスから</h2>
-        <p>「こんなことはできる？」という段階でもお気軽にどうぞ。<br>ご連絡はクラウドワークスのメッセージでお受けしています。</p>
-        <a class="btn btn-primary btn-lg" href="https://crowdworks.jp/public/employees/4675967" target="_blank" rel="noopener noreferrer">
-          クラウドワークスのプロフィールを見る
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
-        </a>
+        <h2>ご相談・お問い合わせ</h2>
+        <p>「こんなことはできる？」という段階でもお気軽にどうぞ。</p>
+
+        <div class="cw-note">
+          <p><b>クラウドワークスからご覧の方</b>は、クラウドワークスのメッセージからご連絡ください。</p>
+          <a class="btn btn-primary btn-lg" href="https://crowdworks.jp/public/employees/4675967" target="_blank" rel="noopener noreferrer">
+            クラウドワークスのプロフィールを見る
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+          </a>
+        </div>
+
+        <div class="inquiry" id="inquiry">
+          <h3>問い合わせフォーム</h3>
+          <p class="inquiry-lead">それ以外からご覧の方は、こちらからお送りください。内容を確認して、メールでお返事します。</p>
+
+          <form id="inquiryForm" class="iq-form" data-endpoint="" novalidate>
+            <div class="iq-step" data-step="input">
+              <p class="iq-off" hidden>問い合わせフォームは準備中です。お手数ですが、クラウドワークスからご連絡ください。</p>
+              <div class="iq-field">
+                <label for="iqName">お名前<span class="req">必須</span></label>
+                <input id="iqName" name="name" type="text" autocomplete="name" maxlength="50" placeholder="ニックネームでもかまいません" required>
+                <p class="iq-err" id="iqNameErr"></p>
+              </div>
+              <div class="iq-field">
+                <label for="iqEmail">メールアドレス<span class="req">必須</span></label>
+                <input id="iqEmail" name="email" type="email" autocomplete="email" inputmode="email" maxlength="254" placeholder="お返事の送り先" required>
+                <p class="iq-err" id="iqEmailErr"></p>
+              </div>
+              <div class="iq-row">
+                <div class="iq-field">
+                  <label for="iqKind">ご相談の種類<span class="req">必須</span></label>
+                  <select id="iqKind" name="kind" required>
+                    <option value="">選んでください</option>
+                    <option>システム開発</option>
+                    <option>業務の自動化（CSV・Excel・スプレッドシートなど）</option>
+                    <option>Webサイト・Webアプリ</option>
+                    <option>その他</option>
+                  </select>
+                  <p class="iq-err" id="iqKindErr"></p>
+                </div>
+                <div class="iq-field">
+                  <label for="iqBudget">予算感<span class="req">必須</span></label>
+                  <select id="iqBudget" name="budget" required>
+                    <option value="">選んでください</option>
+                    <option>5万円未満</option>
+                    <option>5万〜10万円</option>
+                    <option>10万〜30万円</option>
+                    <option>30万〜50万円</option>
+                    <option>50万円以上</option>
+                    <option>未定・相談して決めたい</option>
+                  </select>
+                  <p class="iq-err" id="iqBudgetErr"></p>
+                </div>
+              </div>
+              <div class="iq-field">
+                <label for="iqMessage">お問い合わせ内容<span class="req">必須</span></label>
+                <textarea id="iqMessage" name="message" rows="8" maxlength="3000" required placeholder="例）&#10;・毎月、ネットショップの注文 CSV を Excel で集計していて、1 回 2 時間ほどかかっています&#10;・ボタンひとつで、月別・商品別の表が出るようにしたいです&#10;・使っているもの：Excel、Google スプレッドシート&#10;・希望の時期：来月中ごろまで"></textarea>
+                <p class="iq-hint"><span id="iqCount">0</span> / 3000 文字</p>
+                <p class="iq-err" id="iqMessageErr"></p>
+              </div>
+              <div class="iq-trap" aria-hidden="true">
+                <label for="iqWebsite">この欄は空のままにしてください</label>
+                <input id="iqWebsite" name="website" type="text" tabindex="-1" autocomplete="off">
+              </div>
+              <div class="iq-field iq-agree">
+                <label class="check"><input id="iqAgree" name="agree" type="checkbox" required> <span><a href="privacy.html" target="_blank" rel="noopener">個人情報の取り扱いについて</a>を読み、同意します<span class="req">必須</span></span></label>
+                <p class="iq-err" id="iqAgreeErr"></p>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg iq-main">確認する</button>
+            </div>
+
+            <div class="iq-step" data-step="confirm" hidden>
+              <h4 tabindex="-1" id="iqConfirmTitle">入力内容の確認</h4>
+              <p class="iq-hint">この内容で送ります。直すときは「修正する」を押してください。</p>
+              <dl class="iq-review">
+                <dt>お名前</dt><dd data-show="name"></dd>
+                <dt>メールアドレス</dt><dd data-show="email"></dd>
+                <dt>ご相談の種類</dt><dd data-show="kind"></dd>
+                <dt>予算感</dt><dd data-show="budget"></dd>
+                <dt>お問い合わせ内容</dt><dd data-show="message" class="multi"></dd>
+                <dt>個人情報の取り扱い</dt><dd>同意する</dd>
+              </dl>
+              <p class="iq-err iq-send-err" id="iqSendErr" role="alert"></p>
+              <div class="iq-actions">
+                <button type="button" class="btn btn-ghost btn-lg" id="iqBack">修正する</button>
+                <button type="button" class="btn btn-primary btn-lg" id="iqSend">送信する</button>
+              </div>
+            </div>
+
+            <div class="iq-step" data-step="done" hidden>
+              <h4 tabindex="-1" id="iqDoneTitle">お問い合わせを受け付けました</h4>
+              <p>ありがとうございます。内容を確認して、入力いただいたメールアドレスにお返事します。<span id="iqNo"></span></p>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <p>© 2026 れおん　／　掲載している画面のデータはすべて架空のものです。</p>
+      <p>© 2026 れおん　／　掲載している画面のデータはすべて架空のものです。　／　<a href="privacy.html">個人情報の取り扱いについて</a></p>
     </div>
   </footer>
 
