@@ -11,7 +11,7 @@
   <meta property="og:site_name" content="れおん ポートフォリオ">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:title" content="れおん｜業務システム開発ポートフォリオ">
-  <meta property="og:description" content="業務データ処理・在庫管理・顧客／案件管理の 3 作品。設計書・自動テスト・セキュリティチェックまで公開しています。">
+  <meta property="og:description" content="業務データ処理・在庫管理・顧客管理など 6 作品。設計書・自動テスト・セキュリティチェックまで公開しています。">
   <meta property="og:image" content="https://reon-portfolio.pages.dev/images/og.jpg">
   <meta property="og:image:type" content="image/jpeg">
   <meta property="og:image:width" content="1200">
@@ -61,9 +61,9 @@
             <a class="btn btn-primary" href="#works">作品を見る</a>
             <a class="btn btn-ghost" href="#contact">ご相談はこちら</a>
           </div>
-          <ul class="stats" aria-label="3 作品の数字">
-            <li><b>3</b><span>作品</span></li>
-            <li><b>261</b><span>自動テスト</span></li>
+          <ul class="stats" aria-label="6 作品の数字">
+            <li><b>6</b><span>作品</span></li>
+            <li><b>458</b><span>自動テスト</span></li>
             <li><b>20</b><span>のセキュリティ<br>チェック項目</span></li>
           </ul>
         </div>
@@ -80,7 +80,7 @@
         <header class="section-head">
           <p class="eyebrow">Works</p>
           <h2>作品</h2>
-          <p>3 つとも、業務の流れを想定した架空のシナリオで、実際に動くところまで作っています（データはすべて架空です）。</p>
+          <p>前半の 3 つは、業務の流れを想定した架空のシナリオで、実際に動くところまで作っています。後半の 3 つは、身近な困りごとから作って実際に使っているアプリです（画面のデータはすべて架空です）。</p>
         </header>
 
         <!-- 01 -->
@@ -226,6 +226,151 @@
             <p class="code-link" data-repo="https://github.com/Root-gif4/portfolio03-crm"></p>
           </div>
         </article>
+
+        <header class="group-head" id="daily">
+          <h3>身近な困りごとから作ったアプリ</h3>
+          <p>こちらの 3 つは、身近な「面倒」「忘れる」「お金がかかる」を解決するために作り、実際に使いながら改良を続けているものです。画面のデータは架空の見本です。</p>
+        </header>
+
+        <!-- 04 -->
+        <article class="work reverse" id="work-04">
+          <div class="work-media">
+            <div class="gallery two" data-gallery>
+              <button type="button" class="shot main" data-full="images/p04-home.webp" data-caption="ホーム・先生に見せる画面・お薬（スマホ）：予約まであと何日か、今日のお薬、伝えたいことを大きな文字で">
+                <img src="images/p04-home.webp" width="1320" height="880" alt="通院ノートのホーム、先生に見せる画面、お薬の画面" loading="lazy">
+              </button>
+              <button type="button" class="shot" data-full="images/p04-notes.webp" data-caption="伝えたいこと・つぶやき（2 週間の体調グラフ）・先生に見せる画面のダークモード">
+                <img src="images/p04-notes.webp" width="1320" height="880" alt="伝えたいこと、つぶやき、ダークモードの先生に見せる画面" loading="lazy">
+              </button>
+              <button type="button" class="shot" data-full="images/p04-dark.webp" data-caption="ダークモード：スマホの設定に合わせて自動で切り替わる">
+                <img src="images/p04-dark.webp" width="1320" height="880" alt="ダークモードのホーム、お薬、つぶやき" loading="lazy">
+              </button>
+            </div>
+          </div>
+          <div class="work-body">
+            <p class="work-no">Portfolio 04 ・ スマホ用 Web アプリ</p>
+            <h3>通院ノート</h3>
+            <p class="work-catch">診察で伝えたいことを整理し、お薬と体調を記録</p>
+            <p>
+              病院に行く前に伝えたいことをまとめ、診察室では先生に見せやすい大きな文字の画面に切り替えられます。
+              お薬の服薬チェック、体調のつぶやき、受診の記録、病院の情報もひとつに。データはスマホの中だけに保存します。
+            </p>
+            <dl class="solve">
+              <dt>こんなお困りごとに</dt>
+              <dd>診察で聞きたいことを忘れる／お薬をいつまで飲むのか分からなくなる／体調の変化をうまく伝えられない</dd>
+            </dl>
+            <h4>工夫した点</h4>
+            <ul class="points">
+              <li><b>お金をかけず、データを外に出さない</b>：サーバーも有料の API も使わず、病院の情報は Google マップからコピーして貼るだけで振り分け</li>
+              <li><b>診察室で使いやすい</b>：先生に見せる画面だけは白地・大きな文字。伝えたものはその場で印をつけられます</li>
+              <li><b>お薬の期間を自動で計算</b>：飲み始めと処方された数から飲み終わりを出し、同じお薬はまとめて続けられます</li>
+              <li><b>見本データで試せる</b>：見本のモードは本物のデータを読みも書きもしません</li>
+            </ul>
+            <ul class="tags" aria-label="使った技術">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>localStorage</li><li>PWA</li><li>Node.js テスト</li>
+            </ul>
+            <ul class="facts">
+              <li><span>自動テスト</span>11 件（貼り付けの振り分け・日付・お薬の期間）</li>
+              <li><span>公開</span>Cloudflare Pages（スマホのホーム画面に追加して使う）</li>
+            </ul>
+            <p class="demo-link"><a class="btn btn-ghost btn-sm" href="https://tuin-note.pages.dev/?demo" target="_blank" rel="noopener noreferrer">見本データで試す（スマホ向け）</a></p>
+            <p class="code-link" data-repo="https://github.com/Root-gif4/portfolio04-tsuuin-note"></p>
+          </div>
+        </article>
+
+        <!-- 05 -->
+        <article class="work" id="work-05">
+          <div class="work-media">
+            <div class="gallery two" data-gallery>
+              <button type="button" class="shot main" data-full="images/p05-home.webp" data-caption="ホーム・支出の一覧・登録（スマホ）：その月の合計、予算の残り、カテゴリ別の割合">
+                <img src="images/p05-home.webp" width="1320" height="880" alt="ふたり家計簿のホーム、支出の一覧、登録の画面" loading="lazy">
+              </button>
+              <button type="button" class="shot" data-full="images/p05-reports.webp" data-caption="レポート・予算・設定：月ごとの推移、カテゴリ別の予算と実績、ふたりのメンバー">
+                <img src="images/p05-reports.webp" width="1320" height="880" alt="レポート、予算、設定の画面" loading="lazy">
+              </button>
+              <button type="button" class="shot" data-full="images/p05-arch.webp" data-caption="構成：自宅の PC がサーバー。Tailscale を通ったふたりの端末だけが届く">
+                <img src="images/p05-arch.webp" width="1320" height="880" alt="ふたり家計簿の構成図。スマホから Tailscale を通って自宅 PC の Nginx、FastAPI、PostgreSQL へ" loading="lazy">
+              </button>
+            </div>
+          </div>
+          <div class="work-body">
+            <p class="work-no">Portfolio 05 ・ Web システム（自宅サーバー）</p>
+            <h3>ふたり家計簿</h3>
+            <p class="work-catch">ふたりの共同生活費を、スマホからすぐ記録・共有</p>
+            <p>
+              2 人で暮らす家の家賃・食費・光熱費などを、それぞれのスマホから登録して共有する家計簿です。
+              月別・カテゴリ別の集計、予算と実績の比較、レシート画像の保存ができます。クラウドの有料サービスは使わず、自宅の PC をサーバーにしました。
+            </p>
+            <dl class="solve">
+              <dt>こんなお困りごとに</dt>
+              <dd>共有の出費をどちらかがまとめて記録するのが大変／レシートがたまる／今月あといくら使えるか分からない</dd>
+            </dl>
+            <h4>工夫した点</h4>
+            <ul class="points">
+              <li><b>ログインなしでも安全に</b>：Tailscale が付ける利用者名をサーバーの許可リストと照合。偽の名前や PC の外からの接続が届かないことを実際に確認</li>
+              <li><b>データを外に出さない構成</b>：DB と API は外への出口のない内部ネットワークに置き、入口は 1 つだけ</li>
+              <li><b>止まっても戻せる</b>：毎日のバックアップ、空き容量の確認、失敗時の通知、定期的な復元テストまで自動化</li>
+              <li><b>使い方に合わせて削る</b>：共有の口座で払うので「誰が払ったか」「精算」は作らず、入力を速く</li>
+            </ul>
+            <ul class="tags" aria-label="使った技術">
+              <li>React</li><li>TypeScript</li><li>FastAPI</li><li>PostgreSQL</li><li>Docker Compose</li><li>Nginx</li><li>Tailscale</li><li>PWA</li><li>Playwright</li>
+            </ul>
+            <ul class="facts">
+              <li><span>自動テスト</span>186 件（API 115・画面 63・E2E 8）</li>
+              <li><span>資料</span>API 仕様・ER 図・運用手順（バックアップ・復元）・セキュリティチェック</li>
+              <li><span>ソース</span>準備ができしだい公開します</li>
+            </ul>
+            <p class="code-link" data-repo=""></p>
+          </div>
+        </article>
+
+        <!-- 06 -->
+        <article class="work reverse" id="work-06">
+          <div class="work-media">
+            <div class="gallery" data-gallery>
+              <button type="button" class="shot main" data-full="images/p06-home.webp" data-caption="入力（PC）：「何のお金？」「どこから払った？」を選ぶだけで仕訳ができる。上に今年の所得の見込み">
+                <img src="images/p06-home.webp" width="1360" height="860" alt="確定申告ノートの入力画面" loading="lazy">
+              </button>
+              <button type="button" class="shot" data-full="images/p06-invoice.webp" data-caption="請求書：紙の見た目で確認。送付済みにすると売上、入金済みにすると回収を帳簿に自動で記録">
+                <img src="images/p06-invoice.webp" width="1360" height="860" alt="請求書の画面" loading="lazy">
+              </button>
+              <button type="button" class="shot" data-full="images/p06-report-dark.webp" data-caption="決算（ダークモード）：損益計算書と月別の売上。仕訳帳・総勘定元帳・決算書をシートに書き出せる">
+                <img src="images/p06-report-dark.webp" width="1360" height="860" alt="決算の画面" loading="lazy">
+              </button>
+              <button type="button" class="shot" data-full="images/p06-mobile.webp" data-caption="スマホでも同じ帳簿：入力・請求書・決算">
+                <img src="images/p06-mobile.webp" width="1320" height="880" alt="スマホの入力、請求書、決算の画面" loading="lazy">
+              </button>
+            </div>
+          </div>
+          <div class="work-body">
+            <p class="work-no">Portfolio 06 ・ Google スプレッドシート＋Apps Script</p>
+            <h3>確定申告ノート</h3>
+            <p class="work-catch">帳簿・請求書・決算書を、スプレッドシートだけで</p>
+            <p>
+              個人事業・副業の帳簿づけ、請求書・見積書の作成、年末の決算書の数字までを 1 つにまとめた Web アプリです。
+              会計ソフトの月額料金をかけず、Google スプレッドシートと Apps Script だけで動き、スマホと PC で同じ帳簿を使えます。
+            </p>
+            <dl class="solve">
+              <dt>こんなお困りごとに</dt>
+              <dd>会計ソフトの月額が負担／請求書と帳簿を別々に入れている／簿記の用語が分からず手が止まる</dd>
+            </dl>
+            <h4>工夫した点</h4>
+            <ul class="points">
+              <li><b>簿記を知らなくても使える</b>：質問に答えるだけで、借方・貸方の仕訳を画面側で組み立てます</li>
+              <li><b>請求書と帳簿がつながる</b>：送付・入金に合わせて売上と回収を自動で記録。提案書 → 見積書 → 納品書 → 請求書 と写して作れます</li>
+              <li><b>Google なしでも確かめられる</b>：計算は画面、保存はサーバーに分け、見本用のしかけで画面だけを動かせます</li>
+              <li><b>本人だけが使える</b>：ウェブアプリは「自分だけ」。シートに書く値は数式として動かないようにしています</li>
+            </ul>
+            <ul class="tags" aria-label="使った技術">
+              <li>Google Apps Script</li><li>JavaScript</li><li>HTML</li><li>CSS</li><li>Google スプレッドシート</li><li>Google ドライブ</li>
+            </ul>
+            <ul class="facts">
+              <li><span>主な機能</span>仕訳・按分・減価償却・源泉徴収・消費税（外税／内税）・請求書 PDF・決算書</li>
+              <li><span>資料</span>設置手順・使い方・セキュリティチェック</li>
+            </ul>
+            <p class="code-link" data-repo="https://github.com/Root-gif4/portfolio06-kakutei-note"></p>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -267,7 +412,7 @@
         <header class="section-head">
           <p class="eyebrow">Process</p>
           <h2>進め方</h2>
-          <p>3 つの作品も、すべてこの流れで作りました。</p>
+          <p>6 つの作品も、すべてこの流れで作りました。</p>
         </header>
         <ol class="steps">
           <li><b>ヒアリング</b><span>今の業務の流れと、困っていることをうかがいます</span></li>

@@ -145,6 +145,13 @@ body { word-break: auto-phrase; }
 .facts li { display: grid; grid-template-columns: 6.5em minmax(0, 1fr); gap: 8px; padding: 6px 0; border-top: 1px dashed var(--line); }
 .facts span { font-weight: 700; color: var(--text); }
 .code-link { margin: 16px 0 0; font-weight: 700; }
+.code-link:empty { display: none; }
+.demo-link { margin: 18px 0 0; }
+.btn-sm { padding: 8px 16px; font-size: 14px; }
+.gallery.two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.group-head { margin: 72px 0 36px; max-width: 720px; padding-top: 32px; border-top: 1px solid var(--line); }
+.group-head h3 { font-size: clamp(20px, 2.4vw, 26px); }
+.group-head p { color: var(--muted); margin: 10px 0 0; }
 
 /* ---------- できること ---------- */
 .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; }
